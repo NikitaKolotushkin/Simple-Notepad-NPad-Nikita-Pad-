@@ -1,24 +1,26 @@
+# 'IMPORT' SECTION
 import tkinter
 from tkinter.filedialog import asksaveasfile, askopenfile
 from tkinter.messagebox import showerror
- 
+
+# 'VARIABLES' SECTION  
 FILE_NAME = tkinter.NONE
  
- 
-def new_file():
+# 'MAIN' SECTION
+def new_file(): # CREATE 'NEW FILE' FUNCTION
     global FILE_NAME
     FILE_NAME = "Untitled"
     text.delete('1.0', tkinter.END)
  
  
-def save_file():
+def save_file(): # CREATE 'SAVE FILE' FUNCTION
     data = text.get('1.0', tkinter.END)
     out = open(FILE_NAME, 'w')
     out.write(data)
     out.close()
  
  
-def save_as():
+def save_as(): # CREATE 'SAVE AS' FUNCTION
     out = asksaveasfile(mode='w', defaultextension='.txt')
     data = text.get('1.0', tkinter.END)
     try:
@@ -27,7 +29,7 @@ def save_as():
         showerror(title="Oops!", message="Unable to save file....")
  
  
-def open_file():
+def open_file(): # CREATE 'OPEN FILE' FUNCTION
     global FILE_NAME
     inp = askopenfile(mode="r")
     if inp is None:
@@ -37,7 +39,8 @@ def open_file():
     data = inp.read()
     text.delete('1.0', tkinter.END)
     text.insert('1.0', data)
- 
+    
+# WORK WITH TKINTER
 root = tkinter.Tk()
 root.title("NPAD V 1.0")
 root.minsize(width=600, height=400)
@@ -57,5 +60,6 @@ fileMenu.add_separator()
 fileMenu.add_command(label="Exit", command=root.quit)
 menuBar.add_cascade(label="File", menu=fileMenu)
  
+# 'END' SECTION
 root.config(menu=menuBar)
 root.mainloop()
