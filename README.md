@@ -1,5 +1,6 @@
 # SimpleNotePad
-Just a simple text editor that can create, open, save, and save as files, as well as work with different text document extensions (such as ".txt" or ".py")
+Just a simple text editor that can create, open, save, and save as files, as well as work with different text document extensions (such as ".txt" or ".py").
+
 ## Functions
 + **New** - Create a new file
 + **Open** - Open a file
