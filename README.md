@@ -6,4 +6,4 @@ Just a simple text editor that can create, open, save, and save as files, as wel
 + **Save as** - Saving a file with the ability to specify a name and extension
 + **Save** - Save a file
 
-**Note**: _the standard file name is untilited, and the standard extension is .txt_
+**Note**: _the standard file name is ***untilited***, and the standard extension is ***.txt***_
